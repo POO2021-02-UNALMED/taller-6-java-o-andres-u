@@ -5,11 +5,11 @@ public class Vehiculo {
 
     private String placa;
     private int puertas;
-    private int velocidadMaxima;
+    private final int velocidadMaxima;
     private String nombre;
     private int precio;
     private int peso;
-    private String traccion;
+    private final String traccion;
     private Fabricante fabricante;
 
     public Vehiculo(int velocidadMaxima, String traccion) {
@@ -30,6 +30,7 @@ public class Vehiculo {
         this.precio = precio;
         this.peso = peso;
         this.fabricante = fabricante;
+        Fabricante.agregarFabricante(fabricante);
     }
 
     public static int getCantidadVehiculos() {

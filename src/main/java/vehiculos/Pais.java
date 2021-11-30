@@ -9,7 +9,8 @@ public class Pais {
     }
 
     public static Pais paisMasVendedor() {
-        return null;
+        Fabricante fabricante = Fabricante.fabricaMayorVentas();
+        return fabricante.getPais();
     }
 
     public String getNombre() {
